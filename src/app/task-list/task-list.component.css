@@ -1,0 +1,10 @@
+.task-item{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
