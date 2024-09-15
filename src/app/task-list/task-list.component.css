@@ -8,3 +8,22 @@
 .task-item input[type="checkbox"] {
     margin-right: 10px;
 }
+
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-remove {
+    background-color: #f44336;
+    color: white; 
+    padding: 8px 12px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 10px;
+  }
