@@ -1,6 +1,4 @@
 import { Component, Inject } from '@angular/core';
-import { LOCAL_STORAGE } from '@ng/common';
-
 
 interface Task {
   description: string;
@@ -15,8 +13,10 @@ interface Task {
 
 export class TaskListComponent {
 
-  constructor(@Inject(LOCAL_STORAGE) private localStorage: Storage){
+  constructor(){
   this.loadTasks();
+  console.log(this.tasks);
+  console.log('Entró a cargar tasks');
   }
 
   tasks: Task[] = [
@@ -29,14 +29,15 @@ export class TaskListComponent {
   inEdition: Task | null = null;
 
   loadTasks(){
-    const storedTasks = this.localStorage.getItem('tasks');
+    const storedTasks = localStorage.getItem('tasks');
     if(storedTasks){
       this.tasks = JSON.parse(storedTasks);
     }
+    console.log(this.tasks);
   }
 
   saveTasks(){
-    this.localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
   addTask(){
